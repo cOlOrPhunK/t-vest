@@ -1,0 +1,537 @@
+.result-row {
+    background-color: $prime-color;
+    padding: 16px;
+    border-radius: 8px 8px 0 0;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+        content: url("brand-icon__white--flat.svg");
+        position: absolute;
+        left: -24px;
+        bottom: -32px;
+        height: 132px;
+        width: 125px;
+        opacity: .2;
+    }
+
+    &__title { 
+        font-size: 28px;
+        line-height: 120%;
+        font-weight: 300;
+    }
+
+    &__number {
+        text-align: right;
+    }
+
+    &__main-result {
+        font-size: 40px;
+        font-weight: 400;
+
+        &::after {
+            content: "€";
+        } 
+    }  
+}
+
+.meeting-parameter-row {
+    padding: 32px 16px;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 120%;
+
+    &__form {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__value-input {
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        &--time-icon::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f017";
+            position: absolute;
+            right: -8px;
+            top: 8px;
+            font-size: 40px;
+            color: #f2f2f2;
+            z-index: -1;
+        }
+
+        &--attendees-icon::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0c0";
+            position: absolute;
+            right: -8px;
+            top: 8px;
+            font-size: 40px;
+            color: #f2f2f2;
+            z-index: -1;
+        }
+    }
+
+    .form-group {
+        display: inline-flex;
+        max-width: 70px;
+        margin: 0 8px;
+
+        input {
+            text-align: center;
+            padding: 0;
+            height: 48px;
+            font-weight: 400;
+            border: none;
+            background: #FFFFFF;
+            border-radius: 6px;
+            font-size: 20px;
+            color: $prime-color;
+
+            &::placeholder {
+                color: #cccccc;
+            }
+
+            &:focus, &:visited {
+                box-shadow: none;
+                background: #f8f8f8;
+                border: 1px solid #f2f2f2;
+            }
+        }
+
+        
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            }
+    }
+
+    &__m-duration-box, &__m-attendee-box {
+        display: flex;
+        align-items: center;
+        flex: 0 0 50%;
+        max-width: 320px;
+    }
+}
+
+.btn-circle {
+    height: 32px;
+    width: 32px;
+    line-height: 100%;
+    background: #ffffff;
+    border-radius: 80px;
+    border: 1px solid $prime-color;
+    color: $prime-color;
+    font-size: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background: $prime-color;
+        color: #FFFFFF;
+        box-shadow: 0 4px 8px rgba($prime-color, .4 );
+    }
+
+    &:focus, &:focus-within, &:active {
+        background: darken( $prime-color, 20% );
+        color: darken( $prime-color, 30% );
+        border: darken( $prime-color, 20% );
+        box-shadow: none;
+        outline: none !important;       
+    }
+
+    &--inactive {
+        border-color: #dedede;
+        cursor: default !important;
+        color: #dedede;
+
+        &:hover {
+            border-color: #dedede;
+            background: #FFFFFF;
+            color: #dedede;
+            box-shadow: none;
+        }
+    }
+}
+
+.salary-selection-row {
+    border: 1px solid #efefef;
+
+
+    &__headline {
+        text-align: center;
+        padding: 24px 0;
+        color: #333333;
+        font-weight: 600;
+        background: #efefef;
+
+        .highlighted-attendee {
+            color: $prime-color;
+            text-transform: uppercase;
+        }
+    }
+
+    &__attendee-listing {
+        padding: 24px 16px;
+        overflow-x: hidden;
+        display: flex;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 80px;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+            top: 0;
+            background: linear-gradient(-90deg, white 0, rgba(255, 255, 255, 0.25) 135%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &__tag-number {
+            border-right: 1px solid lighter($prime-color, 50%);
+        }
+
+        .attendee-listing__tag {
+            border-radius: 4px;
+            display: inline-flex;
+            padding: 8px;
+            line-height: 100%;
+            transition: all .4s ease-in-out;
+            margin-right: 8px;
+            flex: 0 0 auto;
+            cursor: pointer;
+
+            &--selected {
+                color: #ffffff;
+                background: $prime-color;
+                box-shadow: 0 8px 16px rgba($prime-color, .4 );
+                cursor: default;
+            }
+
+            &--waiting {
+                background-color: #F8F8F8;
+                color: #CCCCCC;
+
+                .attendee-listing__salary {
+                    padding: 0 8px;
+                }
+
+                .attendee-listing__tag-number {
+                    border-color: #CCCCCC;
+                }
+                
+            }
+
+            &--filled {
+                color: $prime-color;
+                border: 1px solid rgba($prime-color, .6 );
+                background: rgba($prime-color, .2 );
+            }
+        }
+    }
+
+    &__salary-input {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 24px 16px;
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin: 0 16px 24px;
+            justify-content: center;
+        }
+
+        #attendee-salary-input {
+            margin: 0 16px;
+            max-width: 170px;
+            height: 56px;
+            text-align: center;
+            font-size: 28px;
+            background: #f8f8f8;
+            border: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+        }
+    }
+}
+
+.attendee-listing__tag-number {
+    border-right: 1px solid lighten($prime-color, 20%);
+    padding-right: 8px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.share-row {
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &__share-link {
+        color: $secondary-color;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__box-icon {
+        width: 32px; 
+        height: 32px; 
+        background: $secondary-color;
+        color: #ffffff;
+        border-radius: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+    }
+
+    &__start-over-link {
+        color: #333333;
+        display: inline-flex;
+        align-items: center;
+        transition: all .2s ease-in-out;
+    }
+
+    &__single-icon {
+        width: 32px; 
+        height: 32px; 
+        background: #FFFFFF;
+        color: $secondary-color;
+        border-radius: 4px;
+        font-size: 24px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+    }
+}
+
+
+.share-row__share-link:hover {
+    color: $secondary-color;
+    text-decoration: none;
+}
+
+.share-row__start-over-link:hover {
+    color: $secondary-color;
+    text-decoration: none;
+}
+
+
+.recommendation-row {
+
+    a {
+        margin: 16px 0;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    &__try-us {
+        padding: 24px;
+        border-radius: 8px;
+        display: flex;
+        color: #ffffff;
+        justify-content: flex-end;
+        font-size: 18px;
+        font-weight: 100;
+
+        &--yikes {
+            background: #F2086F;
+        }
+
+        i {
+            margin-left: 16px; 
+            font-size: 24px;
+        }
+    }
+
+    &__share-meeting-cost {
+        padding: 24px;
+        border-radius: 8px;
+        display: flex;
+        color: #ffffff;
+        justify-content: flex-end;
+        font-size: 18px;
+        font-weight: 100;
+        background: $secondary-color;
+
+        i {
+            margin-left: 16px; 
+            font-size: 24px;
+        }
+    }
+}
+
+
+
+
+
+
+
+// Styling Cross-Browser Compatible Range Inputs with CSS START
+// https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+// Applying base CSS styles
+// Several styles need to be applied to range inputs in all browsers to override their basic appearance.
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+
+
+
+// Styling the Thumb
+// The widget that you click or drag along the track is called the thumb. It can be styled just like a regular HTML element.
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background: $prime-color;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0 12px 24px rgba(0,0,0,.1);
+    position: relative;
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0 12px 24px rgba(0,0,0,.1);
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background: $prime-color;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    box-shadow: 0 12px 24px rgba(0,0,0,.1);
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background: $prime-color;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+// Styling the Track
+// The line that the thumb moves across is called the track. It is also styled just like a regular HTML element.
+
+// A note on IE: Internet Explorer 10+ has a slightly different approach to range inputs. In IE, you are allowed to specify completely different styles for the upper (right of the thumb) and lower (left of the thumb) areas of the track.
+
+// Another thing to note is that you can apply focus effects to the track which change the styling when the user is interacting with the range.
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #DEDEDE;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #DEDEDE;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #DEDEDE;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #DEDEDE;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #DEDEDE;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #DEDEDE;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #DEDEDE;
+  }
+
+  // Styling Cross-Browser Compatible Range Inputs with CSS END
