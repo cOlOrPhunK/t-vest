@@ -39,7 +39,12 @@
     }
 }
 
+
+
+
 .price-list {
+
+    min-width: 200%;
 
     .details-toggle {
         display: flex;
@@ -75,7 +80,8 @@
         top: 0; 
         background: #FFFFFF; 
         z-index: 2;
-        box-shadow: 0 24px 32px -24px rgba(0,0,0,.05);
+        margin-bottom: 24px;
+        // box-shadow: 0 24px 32px -24px rgba(0,0,0,.05);
     }
 
     .header-column {
@@ -83,8 +89,27 @@
         justify-content: center;
         flex-flow: column;
         text-align: center;
-        padding-bottom: 20px;
-        border-right: 1px solid #f2f2f2;
+        padding: 24px 16px 0;
+        // border-right: 1px solid #f2f2f2;
+
+        &.meeting-selection {
+            background: #F0FCFD;
+            border-radius: 8px;
+            padding: 8px 16px 40px;
+
+            &::after {
+                content: '\f078';
+                font-weight: 900;
+                font-family: 'Font Awesome 5 Free';
+                position: absolute;
+                bottom: 4px;
+                margin: 0 auto;
+                color: #33D6E4;
+                left: 0;
+                width: 100%;
+                animation: bouncing 1s infinite ease-in-out;
+            }
+        }
 
         &:last-child {
             border-right: none;
@@ -92,37 +117,53 @@
 
         .abo {
 
-            &-modell {
+            &-modell, &-meeting-number {
                 text-transform: uppercase;
                 font-size: 12px;
                 font-weight: 700;
                 letter-spacing: 1.4px;
-                margin-bottom: 12px;
+                margin: 24px 0;
+                opacity: .7;
             }
 
             &-price {
                 color: #43E5C2;
-                font-size: 28px;
+                font-size: 32px;
                 font-weight: 700;
                 letter-spacing: -0.5px;
+                padding-right: 16px;
                 margin-bottom: 0;
+                position: relative;
+                display: inline-flex;
+                margin: 0 auto;
                 line-height: 1;
-                margin-bottom: 6px;
+
+                &::after {
+                    content: '€/Mo.';
+                    font-size: 14px;
+                    position: absolute;
+                    font-weight: 200;
+                    right: -20px;
+                    bottom: 3px;
+                }
             }
 
-            &-period {
-                margin-bottom: 16px;
-                font-size: 14px;
-                opacity: .5;
-
-            }
+            // &-meeting-number {
+            //     text-transform: uppercase;
+            //     font-size: 12px;
+            //     font-weight: 700;
+            //     letter-spacing: 1.4px;
+            //     margin: 24px 0;
+            //     opacity: .7;
+            // }
         }
     }
 
     &__row {
 
         .col-3.col-md-2 {
-            border-right: 1px solid #CCCCCC;
+            border-right: 2px dotted #F2F2F2;
+            transition: all .4s ease-in-out;
 
             &:last-child {
                 border-right: none;
@@ -130,7 +171,7 @@
         }
 
         span {
-            padding-top: 24px;
+            padding: 16px 0;
             display: flex;
             width: 100%;
             justify-content: center;
@@ -211,5 +252,47 @@
         font-size: 16px;
         margin-bottom: 24px;
         margin-top: 24px;
+    }
+}
+
+.container-fluid.lg-fluid {
+    max-width: 1140px;
+    overflow-x: scroll;
+}
+
+@keyframes bouncing {
+    0% { transform: translateY(0px) }
+    50% { transform: translateY(-8px) }
+    100% { transform: translateY(0px) }
+}  
+
+.sticky-table-description {
+    position: sticky;
+    left: 0;
+    max-width: 50%;
+}
+
+.table-description {
+    max-width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .price-list__row span {
+        padding: 24px 0 0 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .container-fluid.lg-fluid {
+        overflow-x: auto;
+    }
+
+    .price-list {
+        min-width: auto;
+    }
+
+    .sticky-table-description, .table-description {
+        position: relative;
+        max-width: 100%; 
     }
 }

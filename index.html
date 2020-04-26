@@ -460,14 +460,23 @@
 <article class="pb-5">
   <div class="container">
     <div class="row mb-5">
-      <div class="col-md-8 offset-md-2 text-center mb-5">
+      <div class="col-lg-6 mb-5">
         <h1 style="font-weight: 700; margin-bottom: 16px;">Flexible, transparent pricing that adapts to your needs.</h1>
         <p style="font-size: 18px; font-weight: 200;">Choose the product and plan that’s right for your business. Whether you’re just getting started with ecommerce marketing or looking to drive more revenue through automated emails with more advanced automation, we’ve got you covered.</p>
         <div class="button-list">
           <a href="#" class="btn-regular--ghost mr-3">FREE Meeting Evaluation</a> <a href="#" class="btn-regular--full">Enterprise Solutions</a>
         </div>
       </div>
+      <div class="col-lg-5 offset-lg-1">
+        <div class="consultant-box" style="padding: 40px; border-radius: 16px; background: #43E5C2;">
+          <h4 style="font-weight: 700; margin-bottom: 16px; color: #FFFFFF;">You need some help? We also offer individual inhouse consulting.</h4>
+          <p style="font-size: 18px; font-weight: 200; color: #FFFFFF;">Choose the product and plan that’s right for your business. Whether you’re just getting started with ecommerce marketing or...</p>
+          <a href="#" class="btn-regular--full" style="background: #FFFFFF; color: #43E5C2;">Book a consultation</a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid lg-fluid">
     <div class="price-list" id="pricing-table">
       <div class="row sticky-table-header">
         <div class="col-md-4">
@@ -479,37 +488,39 @@
         </div>
         <div class="col-3 col-md-2 header-column">
           <span class="abo-modell">Starter</span>
-          <span class="abo-price">2,00 €</span>
-          <span class="abo-period">pro Monat</span>
+          <span class="abo-price">2,00</span>
+          <span class="abo-meeting-number">3 Meetings</span>
           <a href="#" class="btn-regular--ghost">Jetzt loslegen</a>
         </div>
-        <div class="col-3 col-md-2 header-column">
+        <div class="col-3 col-md-2 header-column meeting-selection">
           <span class="abo-modell">Basic</span>
-          <span class="abo-price">5,00 €</span>
-          <span class="abo-period">pro Monat</span>
+          <span class="abo-price">5,00</span>
+          <span class="abo-meeting-number">10 Meetings</span>
           <a href="#" class="btn-regular--full">Jetzt loslegen</a>
         </div>
         <div class="col-3 col-md-2 header-column">
           <span class="abo-modell">Medium</span>
-          <span class="abo-price">15,00 €</span>
-          <span class="abo-period">pro Monat</span>
-          <a href="#" class="btn-regular--full">Jetzt loslegen</a>
+          <span class="abo-price">15,00</span>
+          <span class="abo-meeting-number">50 Meetings</span>
+          <a href="#" class="btn-regular--ghost">Jetzt loslegen</a>
         </div>
         <div class="col-3 col-md-2 header-column">
           <span class="abo-modell">Professional</span>
-          <span class="abo-price">100,00 €</span>
-          <span class="abo-period">pro Monat</span>
-          <a href="#" class="btn-regular--full">Jetzt loslegen</a>
+          <span class="abo-price">100,00</span>
+          <span class="abo-meeting-number">∞ Meetings</span>
+          <a href="#" class="btn-regular--ghost">Jetzt loslegen</a>
         </div>
       </div>
       <div class="row price-list__row">
         <div class="col-md-4">
-          <div class="" id="headingOne">
-              <a class="collapsed show" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <H6> Evaluations per meeting</H6>
-              </a>
+          <div class="sticky-table-description">
+            <div class="" id="headingOne">
+                <a class="collapsed show" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <H6>Evaluations per meeting</H6>
+                </a>
+            </div>
           </div>
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pricing-table">
+          <div id="collapseOne" class="collapse table-description" aria-labelledby="headingOne" data-parent="#pricing-table">
             <p>Number of evaluations that can be performed per meeting.</p>
           </div>
         </div>
@@ -520,12 +531,14 @@
       </div>
       <div class="row price-list__row">
         <div class="col-md-4">
-          <div class="" id="headingTwo">
-              <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <H6>Emailing of evaluation</H6>
-              </a>
+          <div class="sticky-table-description">
+            <div class="" id="headingTwo">
+                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <H6>Emailing of evaluation</H6>
+                </a>
+            </div>
           </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pricing-table">
+          <div id="collapseTwo" class="collapse table-description" aria-labelledby="headingTwo" data-parent="#pricing-table">
             <p>Evaluation is linked to email address, falsification by repeated evaluation of one participant is not possible.</p>
           </div>
         </div>
@@ -536,30 +549,34 @@
       </div>
       <div class="row price-list__row">
         <div class="col-md-4">
-          <div class="" id="headingThree">
-              <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                <H6>Calendar view of all meetings and its evaluation history</H6> 
-              </a>
+          <div class="sticky-table-description">
+            <div class="" id="headingThree">
+                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  <H6>Calendar view of all meetings and its evaluation history</H6> 
+                </a>
+            </div>
           </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#pricing-table">
+          <div id="collapseThree" class="collapse table-description" aria-labelledby="headingThree" data-parent="#pricing-table">
             <p>Calendar view shows the existing meetings.</p>
             <p>Evaluation history shows the ratings of all meetings per week or month.</p>
             <p>Color of meetings corresponds to the performed evaluation of the respective meeting (red, yellow, green).</p>
           </div>
-        </div>
-        <div class="col-3 col-md-2 text-center"><span class="negative"><i class="fas fa-minus"></i></span></div>
-        <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
-        <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
-        <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
+        </div> 
+          <div class="col-3 col-md-2 text-center"><span class="negative"><i class="fas fa-minus"></i></span></div>
+          <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
+          <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
+          <div class="col-3 col-md-2 text-center"><span class="positive"><i class="fas fa-check"></i></span></div>
       </div>
       <div class="row price-list__row">
         <div class="col-md-4">
-          <div class="" id="headingFour">
-              <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                <H6>Outlook Addon (MS Office/ 365)</H6>
-              </a>
+          <div class="sticky-table-description">
+            <div class="" id="headingFour">
+                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  <H6>Outlook Addon (MS Office/ 365)</H6>
+                </a>
+            </div>
           </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#pricing-table">
+          <div id="collapseFour" class="collapse table-description" aria-labelledby="headingFour" data-parent="#pricing-table">
             <p>Possibility to download and install the TimeInvest Outlook-integration. Meeting will automatically be created in TimeInvest when clicking the TimInvest button in Outlook calendar.</p>
             <p>Including:
               <ul>
