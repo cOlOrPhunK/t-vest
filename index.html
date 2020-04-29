@@ -18,7 +18,6 @@
 <section id="meeting-calculator" class="pt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6"></div>
       <div class="col-md-6">
 
         <!-- MEETING CALCULATOR START-->
@@ -27,8 +26,7 @@
           <!-- DISPLAYED NAME + TOTAL COAST START-->
           <div class="result-row">
             <div class="result-row__title">
-              Time Investment <br>
-              Calculator
+              Time Investment Calculator
             </div>
 
             <div class="result-row__number">
@@ -48,7 +46,7 @@
 
               <!-- TIME SELECT START -->
               <div class="meeting-parameter-row__m-duration-box">
-                <label class="meeting-parameter-row__label meeting-parameter-row__label--time-icon" for="meeting-duration-input">Meeting<br>Duration</label>
+                <label class="meeting-parameter-row__label meeting-parameter-row__label--time-icon" for="meeting-duration-input">Meeting Duration</label>
                 <div class="meeting-parameter-row__value-input d-flex align-items-center">
                   <button class="btn-circle btn-circle--inactive">–</button>
                   <div class="form-group">
@@ -61,7 +59,7 @@
 
               <!-- ATTENDEES SELECT START -->
               <div class="meeting-parameter-row__m-attendee-box">
-                <label class="meeting-parameter-row__label meeting-parameter-row__label--attendees-icon" for="meeting-attendees-input">Meeting<br>Attendees</label>
+                <label class="meeting-parameter-row__label meeting-parameter-row__label--attendees-icon" for="meeting-attendees-input">Meeting Attendees</label>
                 <div class="meeting-parameter-row__value-input d-flex align-items-center">
                   <button class="btn-circle btn-circle__substract btn-circle--inactive">–</button>
                   <div class="form-group">
@@ -130,22 +128,71 @@
           </div>
           <!-- ATTENDEES SALARY SELECT END -->
 
-          <!-- SHARE + START OVER SECTION START -->
+          <!-- SHARE SECTION START -->
           <div class="share-row">
             <a href="" class="share-row__share-link"><i class="fas fa-share share-row__box-icon"></i>Share this tool</a>
-            <a href="" class="share-row__start-over-link"><i class="fas fa-sync-alt share-row__single-icon"></i>Start over</a>
           </div>
-          <!-- SHARE + START OVER SECTION END -->
+          <!-- SHARE SECTION END -->
+
+      </div>
+      </div>
+      <div class="col-md-6">
+
+        <!-- MEETING CALCULATOR START-->
+        <div class="meeting-calculator">
+
+          <!-- DISPLAYED NAME + TOTAL COAST START-->
+          <div class="result-row">
+            <div class="result-row__title">
+              Time Investment Calculator
+            </div>
+
+            <div class="result-row__number">
+              <div class="result-row__main-result">23</div>
+              <div class="result-row__calculation-factors">
+                <span class="result-row__meeting-time">15 min, </span>
+                <span class="result-row__meeting-attendies">4 <i class="fas fa-users"></i></span>
+              </div>
+            </div>
+          </div>
+          <!-- DISPLAYED NAME + TOTAL COAST END-->
+
+          <div class="interval-selection-row">
+            <div class="interval-selection-row__headline">
+              Want to know even more about your meeting?
+            </div>
+            <div class="interval-selection-row__interval-input">
+
+              <form>
+                <div class="form-group">
+                  <label for="">Meeting Interval</label>
+                  <button class="btn-circle btn-circle--inactive">–</button>
+                  <input type="number" class="form-control" id="interval-selection-input" aria-describedby="meetingInterval" placeholder="0min">
+                  <button class="btn-circle">+</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- ATTENDEES SALARY SELECT END -->
 
           <!-- RECOMMENDATION ROW START -->
           <div class="recommendation-row">
             <a href="" class="recommendation-row__try-us recommendation-row__try-us--yikes">Yikes! Wanna make it cheaper? <i class="fas fa-thumbs-down"></i></a>
             <a href="" class="recommendation-row__share-meeting-cost">Share the cost of this meeting <i class="fas fa-share"></i></a>
           </div>
+
+          <!-- SHARE + START OVER SECTION START -->
+            <div class="share-row">
+              <a href="" class="share-row__share-link"><i class="fas fa-share share-row__box-icon"></i>Share this tool</a>
+              <a href="" class="share-row__start-over-link"><i class="fas fa-sync-alt share-row__single-icon"></i>Start over</a>
+            </div>
+          <!-- SHARE + START OVER SECTION END -->
+
         <!-- MEETING CALCULATOR END-->
 
+
       </div>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -479,12 +526,21 @@
   <div class="container-fluid lg-fluid">
     <div class="price-list" id="pricing-table">
       <div class="row sticky-table-header">
-        <div class="col-md-4">
+        <div class="col-md-4 outer-range-box">
+          <div class="meeting-number-slider mb-5">
+            <label for="meeting-amount-range">Select your preferred amount of meetings</label>
+            <input type="text">
+            <input type="range" class="custom-range" id="meeting-amount-range">
+          </div>
           <div class="details-toggle">
             <div class="hide-details"><i class="fas fa-tasks"></i></div>
             <div class="show-details"><i class="fas fa-tasks"></i></div>
             Details anzeigen
           </div>
+          <!-- <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+          </div> -->
         </div>
         <div class="col-3 col-md-2 header-column">
           <span class="abo-modell">Starter</span>

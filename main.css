@@ -38,6 +38,7 @@
   font-size: 28px;
   line-height: 120%;
   font-weight: 300;
+  max-width: 50%;
 }
 
 .result-row__number {
@@ -53,8 +54,62 @@
   content: "€";
 }
 
+.interval-selection-row {
+  border: 1px solid #efefef;
+}
+
+.interval-selection-row__headline {
+  text-align: center;
+  padding: 24px 0;
+  color: #333333;
+  font-weight: 600;
+  background: #efefef;
+}
+
+.interval-selection-row__interval-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 16px;
+}
+
+.interval-selection-row__interval-input label {
+  margin: 0;
+  padding-right: 16px;
+}
+
+.interval-selection-row__interval-input #interval-selection-input {
+  margin: 0 16px;
+  max-width: 170px;
+  height: 56px;
+  text-align: center;
+  font-size: 28px;
+  background: #f8f8f8;
+  border: none;
+}
+
+.interval-selection-row__interval-input .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 16px 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .meeting-parameter-row {
-  padding: 32px 16px;
+  padding: 24px 8px;
   position: relative;
   overflow: hidden;
   font-size: 14px;
@@ -74,7 +129,6 @@
 }
 
 .meeting-parameter-row__value-input {
-  padding-left: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,32 +139,32 @@
 
 .meeting-parameter-row__label {
   margin: 0;
-  padding: 0;
-  position: relative;
+  padding: 4px 0 8px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .meeting-parameter-row__label--time-icon::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f017";
-  position: absolute;
-  right: -8px;
-  top: 8px;
-  font-size: 40px;
-  color: #f2f2f2;
-  z-index: -1;
+  font-size: 22px;
+  padding-right: 8px;
+  color: #43e5c2;
 }
 
 .meeting-parameter-row__label--attendees-icon::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f0c0";
-  position: absolute;
-  right: -8px;
-  top: 8px;
-  font-size: 40px;
-  color: #f2f2f2;
-  z-index: -1;
+  padding-right: 8px;
+  font-size: 26px;
+  color: #43e5c2;
 }
 
 .meeting-parameter-row .form-group {
@@ -166,6 +220,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -173,6 +231,13 @@
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 320px;
+}
+
+@media screen and (max-width: 450px) {
+  .meeting-parameter-row__label--time-icon::before, .meeting-parameter-row__label--attendees-icon::before {
+    font-size: 20px;
+    padding-right: 4px;
+  }
 }
 
 .btn-circle {
@@ -1044,6 +1109,7 @@ input[type=range]:focus::-ms-fill-upper {
           align-items: center;
   font-size: 14px;
   color: #ABABAB;
+  padding-top: 40px;
 }
 
 .price-list .hide-details {
@@ -1262,6 +1328,31 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 16px;
   margin-bottom: 24px;
   margin-top: 24px;
+}
+
+.meeting-number-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 40px;
+  border: 2px solid #f2f2f2;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.meeting-number-slider input[type="text"] {
+  margin: 8px auto 24px;
+  max-width: 170px;
+  height: 56px;
+  text-align: center;
+  font-size: 28px;
+  background: #f8f8f8;
+  border: none;
+  border-radius: 4px;
 }
 
 .container-fluid.lg-fluid {
