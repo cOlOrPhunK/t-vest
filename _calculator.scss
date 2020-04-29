@@ -25,6 +25,7 @@
         font-size: 28px;
         line-height: 120%;
         font-weight: 300;
+        max-width: 50%;
     }
 
     &__number {
@@ -41,8 +42,52 @@
     }  
 }
 
+.interval-selection-row {
+    border: 1px solid #efefef;
+
+    
+
+    &__headline {
+        text-align: center;
+        padding: 24px 0;
+        color: #333333;
+        font-weight: 600;
+        background: #efefef;
+    }
+
+    &__interval-input {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 24px 16px;
+
+        label {
+            margin: 0;
+            padding-right: 16px;
+        }
+
+        & #interval-selection-input {
+            margin: 0 16px;
+            max-width: 170px;
+            height: 56px;
+            text-align: center;
+            font-size: 28px;
+            background: #f8f8f8;
+            border: none;
+        }
+
+        & .form-group {
+            display: flex;
+            align-items: center;
+            margin: 0 16px 24px;
+            justify-content: center;
+        }
+    }
+
+}
+
 .meeting-parameter-row {
-    padding: 32px 16px;
+    padding: 24px 8px;
     position: relative;
     overflow: hidden;
     font-size: 14px;
@@ -56,38 +101,33 @@
     }
 
     &__value-input {
-        padding-left: 16px;
         display: flex;
         align-items: center;
     }
 
     &__label {
         margin: 0;
-        padding: 0;
-        position: relative;
+        padding: 4px 0 8px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
         &--time-icon::before {
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             content: "\f017";
-            position: absolute;
-            right: -8px;
-            top: 8px;
-            font-size: 40px;
-            color: #f2f2f2;
-            z-index: -1;
+            font-size: 22px;
+            padding-right: 8px;
+            color: #43e5c2;
         }
 
         &--attendees-icon::before {
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             content: "\f0c0";
-            position: absolute;
-            right: -8px;
-            top: 8px;
-            font-size: 40px;
-            color: #f2f2f2;
-            z-index: -1;
+            padding-right: 8px;
+            font-size: 26px;
+            color: #43e5c2;
         }
     }
 
@@ -129,9 +169,17 @@
 
     &__m-duration-box, &__m-attendee-box {
         display: flex;
+        flex-flow: column;
         align-items: center;
         flex: 0 0 50%;
         max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .meeting-parameter-row__label--time-icon::before, .meeting-parameter-row__label--attendees-icon::before {
+        font-size: 20px;
+        padding-right: 4px;
     }
 }
 
