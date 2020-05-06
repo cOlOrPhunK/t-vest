@@ -525,11 +525,20 @@
   </div>
   <div class="container-fluid lg-fluid">
     <div class="price-list" id="pricing-table">
+      <div class="row">
+        <div class="col-md-8 offset-md-4 text-center pt-5 pb-5">
+          <div class="custom-control custom-switch">
+            <span class="">Monat</span>
+            <input type="checkbox" class="custom-control-input" id="customSwitches">
+            <label class="custom-control-label unchecked" for="customSwitches">Jahr</label>
+          </div>
+        </div>
+      </div>
       <div class="row sticky-table-header">
         <div class="col-md-4 outer-range-box">
-          <div class="meeting-number-slider mb-5">
-            <label for="meeting-amount-range">Select your preferred amount of meetings</label>
-            <input type="text">
+          <div class="meeting-number-slider mb-1">   
+            <label for="meeting-amount-range">Preferred amount of meetings</label>
+              <input type="text">  
             <input type="range" class="custom-range" id="meeting-amount-range">
           </div>
           <div class="details-toggle">
@@ -571,7 +580,7 @@
         <div class="col-md-4">
           <div class="sticky-table-description">
             <div class="" id="headingOne">
-                <a class="collapsed show" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <a href="#collapseOne" class="collapsed show" data-toggle="collapse"  aria-expanded="true" aria-controls="collapseOne">
                   <H6>Evaluations per meeting</H6>
                 </a>
             </div>
@@ -589,7 +598,7 @@
         <div class="col-md-4">
           <div class="sticky-table-description">
             <div class="" id="headingTwo">
-                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a href="#collapseTwo" class="collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapseTwo">
                   <H6>Emailing of evaluation</H6>
                 </a>
             </div>
@@ -607,7 +616,7 @@
         <div class="col-md-4">
           <div class="sticky-table-description">
             <div class="" id="headingThree">
-                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                <a href="#collapseThree" class="collapsed" data-toggle="collapse" aria-expanded="true" aria-controls="collapseThree">
                   <H6>Calendar view of all meetings and its evaluation history</H6> 
                 </a>
             </div>
@@ -627,7 +636,7 @@
         <div class="col-md-4">
           <div class="sticky-table-description">
             <div class="" id="headingFour">
-                <a class="collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <a href="#collapseFour" class="collapsed" data-toggle="collapse"  aria-expanded="true" aria-controls="collapseFour">
                   <H6>Outlook Addon (MS Office/ 365)</H6>
                 </a>
             </div>
