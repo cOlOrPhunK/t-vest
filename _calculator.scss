@@ -44,8 +44,7 @@
 
 .interval-selection-row {
     border: 1px solid #efefef;
-
-    
+    border-radius: 0 0 8px 8px;
 
     &__headline {
         text-align: center;
@@ -60,6 +59,20 @@
         flex-flow: column;
         justify-content: center;
         padding: 24px 16px;
+
+        & .form-group {
+            margin: 0 auto !important;
+        }
+
+        & .form-control {
+            margin: 0 16px;
+            max-width: 170px;
+            height: 56px;
+            text-align: center;
+            font-size: 28px;
+            background: #f8f8f8;
+            border: none; 
+        }
 
         label {
             margin: 0;
@@ -227,6 +240,7 @@
 
 .salary-selection-row {
     border: 1px solid #efefef;
+    border-radius: 0 0 8px 8px;
 
 
     &__headline {

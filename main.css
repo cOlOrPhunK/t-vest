@@ -56,6 +56,7 @@
 
 .interval-selection-row {
   border: 1px solid #efefef;
+  border-radius: 0 0 8px 8px;
 }
 
 .interval-selection-row__headline {
@@ -78,6 +79,20 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 24px 16px;
+}
+
+.interval-selection-row__interval-input .form-group {
+  margin: 0 auto !important;
+}
+
+.interval-selection-row__interval-input .form-control {
+  margin: 0 16px;
+  max-width: 170px;
+  height: 56px;
+  text-align: center;
+  font-size: 28px;
+  background: #f8f8f8;
+  border: none;
 }
 
 .interval-selection-row__interval-input label {
@@ -294,6 +309,7 @@
 
 .salary-selection-row {
   border: 1px solid #efefef;
+  border-radius: 0 0 8px 8px;
 }
 
 .salary-selection-row__headline {
