@@ -1116,6 +1116,10 @@ input[type=range]:focus::-ms-fill-upper {
   min-width: 200%;
 }
 
+.price-list .custom-control {
+  max-width: 92vw;
+}
+
 .price-list .details-toggle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1371,6 +1375,7 @@ input[type=range]:focus::-ms-fill-upper {
   border: 2px solid #f2f2f2;
   border-radius: 12px;
   text-align: center;
+  max-width: 91vw;
 }
 
 .meeting-number-slider input[type="text"] {
